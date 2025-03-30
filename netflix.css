@@ -2,7 +2,13 @@
     margin : 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif';
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+* a{
+    color: white;
+    text-decoration: none;
 }
 body{
    background-color: black;
@@ -13,7 +19,7 @@ body{
     background-image: url(IN-en-20250317-TRIFECTA-perspective_d3bd14de-3c51-4227-9244-f14c89469189_large.jpg);
     filter: blur(16px);
 
-    height: 100vh;
+    height: 80vh;
     position: relative;
 }
 .contentContainer{
@@ -30,6 +36,8 @@ body{
 nav{
     /* border: 2px solid green; */
     height: 20vh;
+    position: fixed;
+    z-index: 10000;
 }
 .upperNav{
     /* border: 2px solid blue; */
@@ -92,8 +100,9 @@ nav{
     display: flex;
     justify-content: space-evenly;
     border-radius: 50px;
-    background : rgba(0,0,0,0.5);
-    box-shadow: 2px 3px 14px black;
+    background : rgba(0,0,0,0.8);
+    box-shadow: 2px 3px 14px rgba(0,0,0,.5);
+    backdrop-filter: blur(7px);
     height: 7vh;
 }
 .menuList li{
@@ -104,7 +113,7 @@ nav{
 }
 .bannerSection{
     /* border: 2px solid red; */
-    background-image: url(IN-en-20250317-TRIFECTA-perspective_d3bd14de-3c51-4227-9244-f14c89469189_large.jpg);
+    background-image: url(bck.jpg);
     height: 80vh;
     border-radius: 50px;
     position: relative;
@@ -176,4 +185,169 @@ nav{
     color: white;
     font-size: 1.2rem;
     font-weight: 900;
+}
+.carouserlSection,
+.planSection,
+.reasonToJoinSection,
+.frequentlyAskSection,
+.getStrt{
+    /* border: 2px solid red; */
+    color: white;
+}
+.carouserlSection h2,
+.planSection h2,
+.reasonToJoinSection h2,
+.frequentlyAskSection h2{
+    /* border: 2px solid red; */
+    margin-left: 5rem;
+    font-size: 2.5rem;
+}
+.carouselCardContainer,
+.planCardContainer,
+.reasonToJoinContainer,
+.faqCardContainer{
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin:  2rem auto;
+    
+}
+.carouselCard{
+    width: 12%;
+    /* border: 2px solid yellow; */
+    height: 40vh;
+    border-radius: 20px;
+    position: relative;
+    
+}
+.cauroselNumber{
+    position: absolute;
+    left: -25px;
+}
+.cauroselNumber span{
+    color: rgba(0,0,0,0.8);
+    -webkit-text-stroke: 0.125rem rgb(255,255,255);
+    text-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
+    font-size: 4rem;
+}
+.cauroselImageContainer{
+    width: 100%;
+    height: 100%;
+    
+}
+.cauroselImageContainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.planCard,
+.reasonCard{
+    /* border: 2px solid green; */
+    height: 32vh;
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem 1rem ;
+    border-radius: 15px;
+    border: 2px solid rgb(255,255,255,0.372);
+}
+.plancard1{
+    background: linear-gradient(149deg, #1C4072 6.96%, #172B47 40.17%,
+    #120c1f 73.39%);
+}
+.plancard2{
+    background: linear-gradient(149deg, #1C4072 6.96%, #172B47 40.17%,
+    #120c1f 73.39%);
+}
+.plancard3{
+    background: linear-gradient(149deg, #1C4072 6.96%, #172B47 40.17%,
+    #120c1f 73.39%);
+}
+.plancard4{
+    background: linear-gradient(149deg, #1C4072 6.96%, #172B47 40.17%,
+    #120c1f 73.39%);
+}
+.planCard h2,
+.reasonCard h2{
+    margin-left: 0;
+    font-size: 1.5rem;
+    
+}
+.planCard
+{
+    font-size: 1rem;
+}
+
+.reasonCard{
+    background-color: rgb(47,47,47);
+    border: none;
+    height: 30vh;
+}
+.reasonCard p{
+    font-size: 0.9rem;
+}
+.reasonCardLowerContent{
+    display: flex;
+    justify-content: end;
+}
+
+.reasonCardLowerContent svg{
+    height: 50px;
+    width: 50px;
+    text-align: end;
+}
+
+.faqCard{
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+.faqQuestion,
+.faqAnswer{
+    padding: 1rem;
+    border-radius: 10px;
+    /* border: 2px solid white; */
+    margin-bottom: 10px;
+    background-color: #2e2e2e;
+    color: white;
+}
+
+.faqQuestion{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.faqQuestion span{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.faqCard:hover .faqAnswer{
+    display: block;
+}
+
+.faqAnswer{
+    display: none;
+}
+.faqCardContainer{
+    flex-direction: column;
+}
+
+.getStrt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center; 
+    margin-bottom: 2rem;
+    
+}
+.getStrt p{
+    margin-bottom: 1rem;
+}
+
+.sectionContainer{
+    margin-top: 20vh;
 }
